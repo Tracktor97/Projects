@@ -1,2 +1,17 @@
-# Projects
-This repository is where all of my personal projects are located. This includes tools that I have created, pseudocode, and text files that are accessed from the tools.
+# Security & Cryptography Projects
+
+This repository contains a collection of small security-focused projects
+exploring topics such as steganography, classical cryptography, and
+binary data analysis. It also contains a few passion projects that I have
+completed in my practicing of new libraries and features of python.
+
+## Projects
+- **Steganography (LSB Validation)**  
+  Pre-validation tooling to determine carrier capacity for LSB
+  steganographic embedding.
+
+- **Rotation Cipher Analysis**  
+  A Python tool for analyzing and breaking ROT/shift ciphers using
+  frequency analysis and heuristic scoring.
+
+  

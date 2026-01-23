@@ -1,4 +1,6 @@
-"""This is the start of my digital capsule date machine
+"""This is the start of my digital date machine. The idea is similar
+to a capsule vending machine. I turn the handle and out pops a date
+idea.
 """
 import random as ra
 from datetime import datetime
@@ -91,3 +93,4 @@ if modifier == "No modifier":
     print("No modifier has been added.")
 else:
     print(f"Modifier: \"{modifier}\"")
+

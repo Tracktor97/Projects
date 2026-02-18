@@ -1,95 +1,148 @@
-Exploratory Analysis of Combination Lock Tolerances and Keyspace Implications
-Author: Tracktor97
-Date: 2/17/26
+# Exploratory Analysis of Combination Lock Tolerances and Keyspace Implications
 
-Abstract
-This project explores the mechanical tolerances of a consumer combination lock and examines their potential impact on effective keyspace and security. By systematically testing variations from the original combination, I identified the range of acceptable inputs that still allowed the lock to open. The analysis highlights trade-offs between usability and security and demonstrates the application of experimental methodology to physical security systems.
+**Author:** Tracktor97  
+**Date:** 2/17/16
 
-Introduction
-Combination locks rely on the precise alignment of multiple rotating discs to release a locking mechanism, typically a ball bearing. Standard operation assumes that only the exact combination will allow access. However, mechanical tolerances in manufacturing may create a window where near-correct combinations can succeed, effectively reducing the keyspace and potentially impacting security.
-The goal of this experiment was to:
-Determine the tolerance window for each disc.
-Examine how deviations from the original combination affect successful unlocking.
-Explore potential causes and security implications of these tolerances.
+---
 
-Methodology
-Baseline: The lock’s original combination was recorded: 33-4-13.
-Testing variation: Each disc was adjusted one unit clockwise and counterclockwise.
-Refinement: When an inadequate input was identified, a half-unit adjustment was tested to locate the boundary of success.
-Observation: Results were recorded as:
-Adequate: Lock opens easily.
-Adequate with wiggling: Lock opens with minor manipulation.
-Inadequate: Lock fails to open.
-Due to time constraints, the second and third discs were only partially tested, leaving scope for further exploration.
+## Abstract
 
-Results
-Combination Attempt
-Result
+This study investigates the mechanical tolerances of a consumer-grade combination lock and examines how those tolerances affect its effective keyspace. By systematically varying each dial from the original combination and recording the success or failure of unlocking attempts, this experiment explores the relationship between manufacturing tolerances, usability, and security implications.
+
+The findings suggest that measurable tolerance windows may significantly reduce the effective keyspace of the lock relative to its nominal design.
+
+---
+
+## Introduction
+
+Combination locks are commonly assumed to function on discrete numerical inputs. In theory, a lock with three discs ranging from 0–39 has a keyspace of 40³ = 64,000 possible combinations.
+
+However, physical systems are not mathematically discrete. Mechanical tolerances, material properties, machining precision, and component geometry introduce deviation from idealized behavior. This experiment aims to determine:
+
+- How wide the mechanical tolerance window is for each disc.
+- Whether tolerances reduce the effective keyspace.
+- What mechanical factors may contribute to observed behavior.
+- Whether usability considerations influence security trade-offs.
+
+---
+
+## Methodology
+
+### Original Combination
 33-4-13
-Original code — Adequate
-32-4-13
-Adequate
-32.5-4-13
-Adequate with wiggling
-31-4-13
-Adequate with wiggling
-30-4-13
-Inadequate
-34-4-13
-Adequate
-35-4-13
-Intense wiggling, Adequate
-36-4-13
-Inadequate
-33-3-13
-Adequate
-33-2-13
-Inadequate
-33-2.5-13
-Inadequate
-33-5-13
-Adequate
-33-6-13
-Adequate
-33-7-13
-Inadequate
-33-6.5-13
-Inadequate
-33-4-12
-Adequate with light wiggling
-33-4-12.5
-Adequate
-33-4-14
-Adequate
-33-4-13.5
-Adequate
 
-Key observations:
-The first disc tolerates ±2 units from the original combination.
-Some combinations require manipulation (“wiggling”) to succeed.
-The second and third discs show narrower tolerances based on limited testing.
-There may be mechanical factors — material properties, disc/channel width, or actuator tolerances — contributing to these results.
+### Experimental Procedure
 
-Analysis and Discussion
-Tolerance Implications:
-Mechanical tolerances expand the effective keyspace beyond the nominal combination. This could increase susceptibility to brute-force attacks or manipulation by experienced operators.
-Engineering Considerations:
-Looser tolerances may be intentional to reduce user frustration from failed attempts.
-Tighter tolerances would increase manufacturing complexity and potential for lock failure.
-Security Trade-offs:
-Usability and customer satisfaction may come at the cost of reduced effective security. The experiment highlights that even small deviations in disc alignment can impact lock performance and security.
+1. Begin with the known working combination.
+2. Shift one disc at a time ±1 unit.
+3. If a combination fails, refine by ±0.5 units.
+4. Record each attempt as:
+   - Adequate (opens normally)
+   - Adequate with manipulation (wiggling, tension, or rapid movement required)
+   - Inadequate (does not open)
 
-Connection to Cybersecurity:
-Just as timing differences in web applications can reveal information about valid users, mechanical tolerances can reveal information about valid combinations. The principle of observing subtle system behavior to infer hidden information is consistent across physical and digital security domains.
+Only one disc was adjusted at a time to isolate tolerance effects. Disc 2 and Disc 3 were tested more narrowly due to time constraints.
 
-Limitations and Future Work
-Testing was limited to a single lock and model; results may not generalize.
-Only the first disc was tested extensively; second and third discs require further exploration.
-Future work could examine:
-Dual or multi-disc offsets.
-Physical indicators of channel alignment.
-Effects of repeated use and wear on tolerance.
-Comparative analysis across lock brands and models.
+---
 
-Conclusion
-This exploratory analysis demonstrates that mechanical tolerances in a consumer combination lock can widen the effective keyspace and create potential vulnerabilities. More broadly, it illustrates the value of systematic observation, hypothesis generation, and analytical reasoning — core skills in cybersecurity research and vulnerability analysis.
+## Results
+
+### Disc 1 Variation
+
+| Combination | Result |
+|------------|--------|
+| 33-4-13 | Adequate (original) |
+| 32-4-13 | Adequate |
+| 32.5-4-13 | Adequate (with manipulation) |
+| 31-4-13 | Adequate (with manipulation) |
+| 30-4-13 | Inadequate |
+| 34-4-13 | Adequate |
+| 35-4-13 | Adequate (intense manipulation) |
+| 36-4-13 | Inadequate |
+
+Disc 1 demonstrated a tolerance window of approximately ±2 units from the original value, though values farther from center required increasing manipulation.
+
+### Disc 2 Variation
+
+| Combination | Result |
+|------------|--------|
+| 33-3-13 | Adequate |
+| 33-2-13 | Inadequate |
+| 33-2.5-13 | Inadequate |
+| 33-5-13 | Adequate |
+| 33-6-13 | Adequate |
+| 33-7-13 | Inadequate |
+| 33-6.5-13 | Inadequate |
+
+Disc 2 appeared to exhibit tighter tolerances than Disc 1.
+
+### Disc 3 Variation
+
+| Combination | Result |
+|------------|--------|
+| 33-4-12 | Adequate (light manipulation) |
+| 33-4-12.5 | Adequate |
+| 33-4-13.5 | Adequate |
+| 33-4-14 | Adequate |
+
+Disc 3 also demonstrated a measurable tolerance window, though testing was limited.
+
+---
+
+## Analysis
+
+### Effective Keyspace Reduction
+
+If each disc allows approximately ±2 units of tolerance under certain conditions, the number of effective working combinations increases significantly relative to the nominal combination count.
+
+This reduces the effective security margin and increases the probability of a successful brute-force attempt compared to purely discrete assumptions.
+
+### Mechanical Considerations
+
+The observed tolerances may result from:
+
+- Width of the gate/channel in each disc.
+- Thickness of the locking component (e.g., ball bearing or bar).
+- Machining precision of disc interfaces.
+- Material deformation under tension.
+- Intentional engineering trade-offs to reduce user frustration (false negatives).
+
+If tolerances were tightened, usability may decrease. Excessively tight tolerances could lead to customer dissatisfaction due to difficulty opening the lock even with correct input.
+
+---
+
+## Discussion
+
+This experiment highlights the gap between theoretical and physical security models. In mathematical abstraction, keyspaces are discrete and exact. In physical systems, tolerances blur those boundaries.
+
+The findings parallel concepts in cybersecurity such as:
+
+- Side-channel leakage
+- Timing variance
+- Information revealed through imperfect system implementation
+
+Even small deviations from ideal design can meaningfully alter the attack surface.
+
+Further research could include:
+
+- Testing multiple discs offset simultaneously.
+- Applying constant tension to detect mechanical feedback signals.
+- Comparing multiple lock brands or models.
+- Quantifying statistical success rates across repeated trials.
+
+---
+
+## Limitations
+
+- Single lock model tested.
+- Limited number of trials for Disc 2 and Disc 3.
+- Manipulation pressure not quantitatively measured.
+- No statistical modeling performed.
+
+---
+
+## Conclusion
+
+This exploratory study demonstrates that measurable mechanical tolerances can reduce the effective keyspace of a combination lock. While not conclusive across all lock types, the results illustrate how engineering trade-offs between usability and precision may influence security outcomes.
+
+The methodology emphasizes structured experimentation, boundary testing, and system-level reasoning — approaches directly applicable to broader security research contexts.

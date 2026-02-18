@@ -13,6 +13,6 @@ completed in my practicing of new libraries and features of python.
 - **Rotation Cipher Analysis**  
   A Python tool for analyzing and breaking ROT/shift ciphers using
   frequency analysis and heuristic scoring.
-## Research
+# Research
 - **Mechanical Tolerance Analysis of a Consumer Combination Lock**
   

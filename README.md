@@ -1,6 +1,6 @@
 # Security & Cryptography Projects
 
-This repository contains a collection of small security-focused projects
+This repository contains a collection of small security-focused projects and research
 exploring topics such as steganography, classical cryptography, and
 binary data analysis. It also contains a few passion projects that I have
 completed in my practicing of new libraries and features of python.
@@ -14,4 +14,6 @@ completed in my practicing of new libraries and features of python.
   A Python tool for analyzing and breaking ROT/shift ciphers using
   frequency analysis and heuristic scoring.
 
+  ## Research
+  -**Mechanical Tolerance Analysis of a Consumer Combination Lock**
   

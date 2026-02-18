@@ -15,5 +15,5 @@ completed in my practicing of new libraries and features of python.
   frequency analysis and heuristic scoring.
 
   ## Research
-  -**Mechanical Tolerance Analysis of a Consumer Combination Lock**
+  - **Mechanical Tolerance Analysis of a Consumer Combination Lock**
   
